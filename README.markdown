@@ -1,6 +1,6 @@
-# Tall Green Tree Website
+# [Tall Green Tree Website](http://tallgreentree.github.com/tallgreentree)
 
-This is the website for Tall Green Tree. It makes sense to me to have it as the organization page on github
+This is the website for Tall Green Tree. It makes sense to me to have it as the [organization page](http://tallgreentree.github.com/tallgreentree) on github
 
 ### Setting up the site
 
