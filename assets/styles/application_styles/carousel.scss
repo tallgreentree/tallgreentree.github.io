@@ -1,0 +1,78 @@
+.carousel {
+  // Account for jankitude on images
+  // .item > img {
+  //   display: block;
+  //   line-height: 1;
+  // }
+  position: relative;
+
+  .carousel-inner {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+
+  .item {
+    display: none;
+    position: relative;
+    @include transition(.6s ease-in-out left);
+  }
+  .active, .next, .prev { display: block; }
+  .active { left: 0; }
+
+  .next, .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .next { left: 100%; }
+  .prev { left: -100%; }
+
+  .next.left, .prev.right { left: 0; }
+
+  .active.left { left: -100%; }
+  .active.right { left: 100%; }
+
+  ul {
+    @extend .vehicle-list;
+    padding: 0 7%;
+    li {
+      margin-bottom: 0;
+    }
+  }
+  
+  .carousel-control.left {
+    @extend .btn-pop;
+    z-index: 10;
+    padding: 0;
+    position: absolute;
+    right: 0; top: 0;
+    height: 100%;
+    width: 30px;
+    span {
+      margin-top: 40%;
+      @extend .hide-text;
+      @include triangle(transparent transparent transparent $grayDark);
+      border-width: 30px;
+    }
+    &:hover span {
+      @extend .short-transition;
+      @include triangle(transparent transparent transparent $grayMed);
+    }
+  }
+  .carousel-control.right {
+    @extend .carousel-control.left;
+    left: -30px;
+    span {
+      @include triangle(transparent $grayDark transparent transparent);
+    }
+    &:hover span {
+      @include triangle(transparent $grayMed transparent transparent);
+    }
+  }
+  
+
+}

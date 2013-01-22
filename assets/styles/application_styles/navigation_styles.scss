@@ -1,0 +1,65 @@
+//________________________
+//
+// Tabs
+//
+//________________________
+
+.nav-tabs {
+  @extend .horizontal-list;
+  position: relative;
+}
+.nav-tabs > li {
+  float: left;
+}
+.nav-tabs > li > a {
+  display: inline-block;
+  padding-right: 12px;
+  padding-left: 12px;
+  line-height: 14px; // keeps the overall height an even number
+}
+
+.nav-tabs {
+  border-bottom: 1px solid $grayDark;
+}
+// Make the list-items overlay the bottom border
+.nav-tabs > li {
+  @include border-radius(4px 4px 0 0);
+  border-right: 1px solid $grayLighter;
+  margin-right: 2px;
+  margin-bottom: -1px;
+}
+
+// Actual tabs (as links)
+.nav-tabs > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 0;
+  color: $grayLight;
+  @include border-radius(4px 4px 0 0);
+  &:hover {
+    border: 1px solid;
+    border-color: $grayDark $grayDark transparent;
+    border-bottom: 0;
+    color: $grayDark;
+  }
+}
+// Active state, and it's :hover to override normal :hover
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  color: $textColor;
+  background-color: $bodyBackground;
+  border: 1px solid $grayDark;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+//Tab panes that aren't active are hidden
+.tab-pane {
+  // @include transition(linear .5s);
+  // color: transparent;
+  display: none;
+  &.active {
+    // @include transition(linear .5s);
+    // color: $textColor;
+    display: block;
+  }
+}

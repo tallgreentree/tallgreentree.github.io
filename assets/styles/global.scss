@@ -1,0 +1,16 @@
+// reset with normalize!
+@import 'assets/styles/application_styles/normalize.scss';
+@import 'assets/styles/application_styles/_vars.scss';
+
+// Import the bootstrap components you need...
+@import 'assets/styles/includes/bootstrap/_mixins.scss';
+@import 'assets/styles/includes/bootstrap/_grid.scss';
+
+// Import site's variables and mixins
+@import 'assets/styles/application_styles/_gradients.scss';
+@import 'assets/styles/application_styles/_utilities.scss';
+@import 'assets/styles/application_styles/_mixins.scss';
+@import 'assets/styles/application_styles/global_styles.scss';
+
+// Import page styles
+@import 'assets/styles/page_styles/homepage.scss';

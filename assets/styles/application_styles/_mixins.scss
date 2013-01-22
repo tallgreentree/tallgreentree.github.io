@@ -1,0 +1,19 @@
+//________________________
+//
+// Mixins!
+//
+//________________________
+
+
+@mixin triangle($borderColor) {
+// has four values, for the four sides.
+// set transparent for all of them but one.
+// Meant to be included in a psuedo element
+  content: "";
+  display: block;
+  border-color: $borderColor;
+  border-style: solid;
+  height:0;
+  width:0;
+  position: absolute;
+}
