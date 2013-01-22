@@ -66,3 +66,27 @@ header a {
     @include translate(1px,1px);
   }
 }
+
+#grid-overlay {
+  // display: none;
+  position: fixed;
+  height: 100%; width: 100%;
+  z-index: 99999;
+  .grid-receptacle {
+    @extend .receptacle;
+    height: 100%;
+  } 
+  .inner-recep { height: 100%;}
+  .column {
+    float: left;
+    width: $oneColumn;
+    height: 100%;
+    margin-left: $gutterW;
+    border: 1px solid #b2dec1;
+    border-top: none;
+    border-bottom: none;
+  }
+  .inner-recep .column:first-of-type {
+    margin-left: 0;
+  }
+}

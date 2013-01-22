@@ -11,6 +11,20 @@
   margin: 0 auto;
 }
 
+article {
+  a {
+    display: block;
+    float: left;
+    position: relative;
+    width: $twoColumn;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 h1 {
   text-align: center;
 }
