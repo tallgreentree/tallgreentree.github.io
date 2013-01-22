@@ -9,14 +9,14 @@
 // We could load we are loading 200, 300, 400 (normal), 600, 800, 400 italic
 // <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,900,700,600,300,200' rel='stylesheet' type='text/css'>
 // $baseFont: 'Titillium Web', helvetica, sans-serif;
-$bodyFont: 'EB Garamond', serif;
+$bodyFont: 'Donegal One', serif;
 
 // Header:
 // Currently only loading normal weight
 // <link href='http://fonts.googleapis.com/css?family=Autour+One' rel='stylesheet' type='text/css'>
 // $headerFont: 'Autour One', helvetica, sans-serif;
 // Now loading a whole bunch of weights. Remove them when you figure out which you want.
-$headerFont: 'Raleway', sans-serif;
+$headerFont: 'Open Sans', sans-serif;
 
 //________________________
 //
@@ -47,6 +47,7 @@ $linkColorDarker: #38447E;
 
 $stolenRed: #8b0b0b;
 $textColor: #111;
+// $textColor: #4f3600;
 $biWhite: #fff;
 
 $grayLighterer: lighten(#eee, 4%);
@@ -63,11 +64,10 @@ $grayDarker: #555555;
 //
 //________________________
 
-$topsearchBackground: url("/assets/background-granite.png") repeat repeat;
-$searchBackground: url("/assets/background-granite.png") repeat repeat;
 $searchBorder: darken(rgb(234,234,234), 5%);
-$footerBackground: url("/assets/background-diagonal.png") repeat repeat;
 $bodyBackground: #fdfdfd;
+$secondBackground: url('assets/images/pattern.png') repeat no-repeat;
+$bodyBackground: url('assets/images/background2.png') repeat repeat;
 
 
 //________________________

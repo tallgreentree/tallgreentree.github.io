@@ -4,31 +4,173 @@
 //
 //________________________
 
-
-.container {
+.upper-wrap {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  min-width: 1200px;
+  // @include box-shadow(0 0 10px rgba(black,.2));
+  padding-bottom: 100px;
+  padding-top: 150px;
+  border-bottom: 1px solid #fafafa;
+  z-index: 10;
+}
+
+h1, h2 {
+  float: left;
+  margin: 0;
+}
+
+hgroup {
+  @include clearfix;
+  h1 { 
+    width: $sixColumn;
+    // color: #f1f1f1;
+    font-size: 74px;
+    font-weight: 800;
+    line-height: 1.15em;
+    
+  }
+  h2 {
+    margin: 48px 0 0 $gutterW;
+    width: $sixColumn;
+    // font-size: 40px;
+    // font-weight: 600;
+  }
+}
+
+
+address {
+  @include clearfix;
+  font-style: normal;
+  // text-align: center;
+  font-family: $headerFont;
+  line-height: 1.25em;
+  // margin-top: 1em;
+  // a {
+  //   float: left;
+  //   display: block; 
+  //   text-align: center;
+  //   width: $twoColumn;
+  //   margin-right: $gutterW;
+  // }
+  // .mailing, .email {
+  //   width: $threeColumn;
+  // }
+  // span { display: block; }
+}
+
+
+//________________________
+//
+// Explanations
+//
+//________________________
+
+// .explanations {
+//   @include clearfix;
+  // h4, p {
+    // float: left;
+  //   margin-bottom: 0;
+  //   margin-right: 20px;
+  // }
+  // div {
+  //   float: left;
+
+  // }
+// }
+
+
+//________________________
+//
+// Examples
+//
+//________________________
+
+.lower-wrap {
+  padding-top: 50px;
+  background: url(/assets/images/background2.png) repeat, url(/assets/images/pattern.png) repeat-x;
+  @include box-shadow(#{inset 0 1px 10px rgba(black,.2)});
+  padding-bottom: 50px;
+}
+.examples {
+  // margin-top: 100px;
+
+  .example-row {
+    @include clearfix;
+    margin-top: $singlePad;  
+  }
+
+  article {
+    p {
+      float: left;
+      margin: 0 0 0 2*$gutterW;
+      // margin-left: 2 * $gutterW;
+      width: (8 * $columnW) + (6 * $gutterW);
+      padding-right: $gutterW;
+    }
+
+    a {
+      display: block;
+      float: left;
+      position: relative;
+      margin: 0;
+      width: (4 * $columnW) + (2 * $gutterW);
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    // &:nth-of-type(2n) { Not working right.
+    &.dashscribe {
+      a { margin-left: $gutterW}
+      p { padding-right: 0;}
+      img {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 article {
-  a {
+  @include clearfix;
+  position: relative;
+  display: block;
+  width: 50%;
+  // margin-right: $gutterW;
+  float: left;
+}
+
+
+
+.us {
+  @include clearfix;
+  padding: 50px 0 100px;
+  
+  article  h3 {
+    margin: 0;
+  }
+  .image-holder {
     display: block;
     float: left;
     position: relative;
-    width: $twoColumn;
+    margin: 0;
+    width: (4 * $columnW) + (2 * $gutterW);
   }
   img {
+    @include box-shadow(1px 1px 2px rgba(black,.2));
     display: block;
     width: 100%;
     height: auto;
   }
+  .text {
+    float: left;
+    margin: 0 0 0 2*$gutterW;
+    width: (8 * $columnW) + (6 * $gutterW);
+    padding-right: $gutterW;
+  }
+  article:nth-of-type(2n) {
+    .image-holder { margin-left: $gutterW}
+    p { padding-right: 0;}
+  }
 }
-
-h1 {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-}
-
