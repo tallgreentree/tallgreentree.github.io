@@ -86,10 +86,21 @@ address {
 //________________________
 
 .lower-wrap {
-  padding-top: 50px;
-  background: url(/assets/images/background2.png) repeat, url(/assets/images/pattern.png) repeat-x;
   @include box-shadow(#{inset 0 1px 10px rgba(black,.2)});
+  @extend .green-gradient;
+  padding-top: 50px;
+  position: relative;
+  // background: url(/assets/images/pattern.png) repeat-x;
   padding-bottom: 50px;
+  &:after {
+    @extend .opposite-grad;
+    display: block;
+    content: " ";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 30%;
+  }
 }
 .examples {
   // margin-top: 100px;
@@ -107,14 +118,19 @@ address {
       width: (8 * $columnW) + (6 * $gutterW);
       padding-right: $gutterW;
     }
-
-    a {
+    .image-holder {
       display: block;
       float: left;
       position: relative;
       margin: 0;
       width: (4 * $columnW) + (2 * $gutterW);
+      a {
+        display: block;
+        width: 100%;
+        position: relative;
+      }
     }
+
     img {
       display: block;
       width: 100%;
@@ -147,8 +163,16 @@ article {
   @include clearfix;
   padding: 50px 0 100px;
   
-  article  h3 {
+  article  h3, h4 {
     margin: 0;
+  }
+  
+  article h4 {
+    font-family: $bodyFont;
+    font-weight: 200;
+  }
+  .skillz {
+    color: $grayDark;
   }
   .image-holder {
     display: block;
@@ -158,7 +182,7 @@ article {
     width: (4 * $columnW) + (2 * $gutterW);
   }
   img {
-    @include box-shadow(1px 1px 2px rgba(black,.2));
+    @include box-shadow(0px 0px 2px rgba(black,.2));
     display: block;
     width: 100%;
     height: auto;
@@ -172,5 +196,31 @@ article {
   article:nth-of-type(2n) {
     .image-holder { margin-left: $gutterW}
     p { padding-right: 0;}
+  }
+}
+
+
+footer.receptacle {
+  padding: 40px $singlePad;
+
+  address {
+    @include clearfix;
+  }
+  span {
+    display: block; 
+    float: left;
+    width: $twoColumn;
+    margin-left: $gutterW;
+    &:first-of-type {
+      margin-left: $oneColumn + $gutterW;
+    }
+  }
+  .long {
+    width: $threeColumn;
+  }
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
