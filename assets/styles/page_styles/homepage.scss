@@ -24,7 +24,7 @@ hgroup {
   h1 { 
     width: $sixColumn;
     // color: #f1f1f1;
-    font-size: 74px;
+    font-size: 72px;
     font-weight: 800;
     line-height: 1.15em;
     
@@ -144,11 +144,22 @@ address {
       display: block;
       width: 100%;
       height: auto;
+      position: relative;
+      top: 40px;
     }
     // &:nth-of-type(2n) { Not working right.
     &.pressed {
-      a { margin-left: $gutterW}
+      a { //margin-left: $gutterW
+      }
       p { padding-right: 0;}
+      img {
+        top: 50px;
+      }
+    }
+    &.rentalutions {
+      img {
+        top: 45px;
+      }
     }
     &.dashscribe {
       img {
